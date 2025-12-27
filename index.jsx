@@ -13,7 +13,7 @@ app.use(cors());
 app.use(express.json());
 app.use("/uploads", express.static("uploads"));
 
-mongoose.connect("mongodb+srv://User:aso09876@cluster.jiqtsol.mongodb.net/socialmedia");
+mongoose.connect("");
 
 const storage = multer.diskStorage({
   destination: "uploads",
@@ -101,3 +101,4 @@ app.post("/comment/:postId", async (req, res) => {
 app.listen(3001, () => {
   console.log("Server running on http://localhost:3001");
 });
+
